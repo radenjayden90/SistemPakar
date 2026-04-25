@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Diagnosa Tanaman Hias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>BOTANICAL <span>EXPERT_SYS</span></h1>
+            <p>Diagnosa Penyakit & Hama Tanaman Hias Berbasis Forward Chaining</p>
+        </div>
+
+        <form id="diagnosaForm">
+            <h3 class="section-title">Pilih Gejala yang Teramati:</h3>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G1">
+                    <span class="checkmark"></span>
+                    [G1] Daun bawah menguning
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G2">
+                    <span class="checkmark"></span>
+                    [G2] Terdapat bercak coklat/hitam pada daun
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G3">
+                    <span class="checkmark"></span>
+                    [G3] Daun rontok berlebihan
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G4">
+                    <span class="checkmark"></span>
+                    [G4] Batang tanaman melunak atau membusuk
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G5">
+                    <span class="checkmark"></span>
+                    [G5] Media tanam berbau kotor/tidak sedap
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G6">
+                    <span class="checkmark"></span>
+                    [G6] Terdapat serangga kecil putih seperti kapas
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="gejala" value="G7">
+                    <span class="checkmark"></span>
+                    [G7] Pertumbuhan lambat / kerdil
+                </label>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span class="btn-text">RUN DIAGNOSTX</span>
+                <span class="loader" style="display: none;"></span>
+            </button>
+        </form>
+
+        <div id="hasilBox" class="hidden">
+            <div class="terminal-header">
+                <span>[SCAN_COMPLETE]</span>
+            </div>
+            <div class="terminal-body">
+                <h2>HASIL IDENTIFIKASI</h2>
+                <div id="resultContent">
+                    <!-- injected by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
